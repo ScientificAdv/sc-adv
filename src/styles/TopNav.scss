@@ -7,28 +7,41 @@
     background-color: #fff;
     border-bottom: 2px solid #ccc;
     z-index: 999;
+
     .menu {
         margin-left: 30px;
     }
+
     .input {
         margin-left: 100px;
         border-left: 3px solid #000;
         border-bottom: 3px solid #000;
     }
+
+    .el-input {
+        padding: 8px 5px;
+    }
+
     .el-input__inner {
         border: 0;
+        height: 20px;
+        line-height: 20px;
     }
+
     .el-input__inner::placeholder {
         font-size: 15px;
         color: #000;
     }
 }
+
 .topNav {
     background-color: #fff !important;
     border-bottom: 0 !important;
+
     li:not(:first-child) {
         margin-left: 30px;
     }
+
     .el-submenu.is-active {
         border: 0 !important;
     }
