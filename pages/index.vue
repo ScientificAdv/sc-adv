@@ -1,16 +1,16 @@
 <template>
   <div class="container">
     <div>
-      <p>首页</p>
+      <h1>首页</h1>
+      <div class="placeholder" style="min-height:500px"></div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-}
+  export default {
+  }
 </script>
 
 <style>
-
 </style>

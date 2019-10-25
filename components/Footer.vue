@@ -1,17 +1,17 @@
 <template>
-  <div class="bottomBlock">
-    <div class="leftBlock">
-      <div class="titleOne">本页面最后编辑于2019-10-1</div>
-      <div class="titleTwo">除非另有声明，否则以非盈利的模式共享授权</div>
-      <div class="titleThree">
-        <div class="subTitleOne">隐私政策</div>
-        <div class="subTitleTwo">科学ADV</div>
-        <div class="subTitleThree">中文wiki免责声明</div>
+  <div class="footer">
+    <div class="left-block">
+      <p>本页面最后编辑于2019-10-1</p>
+      <p>除非另有声明，否则以非盈利的模式共享授权</p>
+      <div class="d-flex">
+        <nuxt-link class="item" to="/">隐私政策</nuxt-link>
+        <nuxt-link class="item" to="/">科学ADV</nuxt-link>
+        <nuxt-link class="item" to="/">中文wiki免责声明</nuxt-link>
       </div>
     </div>
-    <div class="rightBlock">
-      <img class="ImgOne" src="~/assets/img/copyright/cc-by-nc-sa.png" alt />
-      <img class="ImgTwo" src="~/assets/img/copyright/poweredby_mediawiki_176x62.png" alt />
+    <div class="copy-right-block">
+      <img class="image-1" src="~/assets/img/copyright/cc-by-nc-sa.png" alt />
+      <img class="image-2" src="~/assets/img/copyright/poweredby_mediawiki_176x62.png" alt />
     </div>
   </div>
 </template>
@@ -26,5 +26,33 @@
 </script>
 
 <style lang="scss">
-  @import "~/assets/styles/BottomNav.scss";
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 15px 50px;
+    background-color: #000;
+    color: #fff;
+    box-sizing: border-box;
+
+    .left-block {
+      font-size: 0.8em;
+
+      .item {
+        margin-right: 1em;
+        color: #eee;
+      }
+    }
+
+    .copy-right-block {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 35px;
+
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
 </style>

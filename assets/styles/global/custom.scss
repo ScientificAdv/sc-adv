@@ -1,3 +1,16 @@
 .page-content {
     background-color: #fff;
 }
+
+.placeholder {
+    width: 1px;
+}
+
+
+.drop-cap::first-letter {
+    font-size: 200%;
+    float: left;
+    text-indent: 0;
+    padding: 2px;
+    line-height: 1em;
+}
