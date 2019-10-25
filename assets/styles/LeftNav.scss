@@ -1,0 +1,60 @@
+.leftNav {
+    background-color: #000;
+    height: 100vh;
+    // position: fixed;
+    left: 0;
+    z-index: 999;
+    padding-top: 10px;
+}
+
+.logo {
+    width: 80%;
+    margin: auto;
+    height: 100px;
+    border: 1px solid #fff;
+    // margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+}
+
+.titleBlock {
+    display: flex;
+    flex-direction: column;
+    line-height: 16px;
+    padding: 15px 0;
+}
+
+.whiteLine {
+    background-color: #fff;
+    height: 1px;
+    width: 50%;
+    margin: 15px 0 15px 15px;
+}
+
+.leftNavBar {
+    border-right: 0;
+}
+
+.navItem {
+    padding-left: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+
+.navItem:not(:first-child) {
+    margin-top: 10px;
+}
+
+.navItem:hover {
+    background-color: #2196f3;
+    width: 105%;
+}
+
+.navItem.nuxt-link-exact-active {
+    background-color: #2196f3;
+    color: #fff;
+    width: 105%;
+}
