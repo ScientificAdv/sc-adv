@@ -1,22 +1,36 @@
-# sc-adv
+# SC ADV
 
-> el psy kongroo
+> 科学ADV中文Wiki
 
-## Build Setup
+El Psy Kongroo
 
+**[编写代码前必读](https://github.com/hyggerZheuang/sc-adv/wiki/命名规范)**
+
+## 安装设置
+
+### 安装依赖
 ``` bash
-# install dependencies
 $ yarn install
+```
 
-# serve with hot reload at localhost:8080
+### 在本地运行 （localhost:8080）
+``` bash
 $ yarn dev
+```
 
-# build for production and launch server
+### 生成运行于生产环境的页面 & 运行
+``` bash
 $ yarn build
 $ yarn start
+```
 
-# generate static project
+### 生成可在Github Page浏览的静态页面（/dist）
+``` bash
 $ yarn generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## 参考文档
+
+[Nuxt.js文档](https://nuxtjs.org)
+
+[代码规范](https://github.com/ecomfe/spec)
