@@ -323,7 +323,7 @@
         ],
         gameItems: [
           {
-            title: '命运石之门',
+            title: '命运石之门（游戏）',
             to: '/'
           },
           {
@@ -335,13 +335,13 @@
             to: '/'
           },
           {
-            title: '命运石之门0‎‎‎‎',
+            title: '命运石之门0‎‎‎‎（游戏）',
             to: '/'
           },
         ],
         animeItems: [
           {
-            title: '命运石之门',
+            title: '命运石之门（动画）',
             to: '/'
           },
           {
@@ -353,7 +353,7 @@
             to: '/'
           },
           {
-            title: '命运石之门0',
+            title: '命运石之门0（动画）',
             to: '/'
           },
         ],
@@ -367,15 +367,15 @@
         ],
         novelItems: [
           {
-            title: '圆环连锁のウロボロス(',
+            title: '圆环连锁のウロボロス',
             to: '/'
           },
           {
-            title: 'STEINS;GATE 蝶翼のダイバージェンス: Reverse',
+            title: 'STEINS;GATE 蝶翼のダイバージェンス',
             to: '/'
           },
           {
-            title: 'STEINS;GATE2 形而上のネクローシス: Reverse',
+            title: 'STEINS;GATE2 形而上のネクローシス',
             to: '/'
           },
           {
