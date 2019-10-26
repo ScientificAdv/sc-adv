@@ -48,6 +48,11 @@
 <script>
   export default {
     name: "SteinsGate",
+    head() {
+      return {
+        title: '命运石之门 | 科学ADV中文维基'
+      }
+    },
     data() {
       return {
         classItem: [

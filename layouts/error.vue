@@ -7,7 +7,11 @@
 
 <script>
   export default {
-
+    head() {
+      return {
+        title: '出错了 | 科学ADV中文维基'
+      }
+    },
   }
 </script>
 

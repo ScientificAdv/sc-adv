@@ -9,6 +9,11 @@
 
 <script>
   export default {
+    head() {
+      return {
+        title: '首页 | 科学ADV中文维基'
+      }
+    },
   }
 </script>
 
