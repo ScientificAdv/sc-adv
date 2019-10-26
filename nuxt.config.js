@@ -11,7 +11,8 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.0/normalize.min.css,npm/bootstrap-css-only@4.1.3/css/bootstrap-grid.min.css' }
+            { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.0/normalize.min.css,npm/bootstrap-css-only@4.1.3/css/bootstrap-grid.min.css' },
+            { rel: 'stylesheet', href: '//at.alicdn.com/t/font_1478452_c6l3dd64sfi.css' }
         ]
     },
     /*
