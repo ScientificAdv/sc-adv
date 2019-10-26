@@ -10,8 +10,8 @@
       </div>
     </div>
     <div class="copy-right-block">
-      <img class="image-1" src="~/assets/img/copyright/cc-by-nc-sa.png" alt />
-      <img class="image-2" src="~/assets/img/copyright/poweredby_mediawiki_176x62.png" alt />
+      <img src="~/assets/img/copyright/cc-by-nc-sa.png" alt="cc-by-nc-sa" />
+      <img src="~/assets/img/copyright/poweredby_mediawiki_176x62.png" alt="powered by mediawiki" />
     </div>
   </div>
 </template>

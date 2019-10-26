@@ -5,29 +5,9 @@
       <nuxt-link tag="li" to="/" class="nav-item" exact>首页</nuxt-link>
       <nuxt-link tag="li" to="/ph1" class="nav-item">人物导航</nuxt-link>
       <div class="hr"></div>
-      <nuxt-link tag="li" to="/ph2" class="nav-item">
-        <div class="title-text-cn">混沌之脑</div>
-        <div class="title-text-en">Chaos;Head</div>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/steins-gate" class="nav-item">
-        <div class="title-text-cn">命运石之门</div>
-        <div class="title-text-en">Steins;Gate</div>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/ph3" class="nav-item">
-        <div class="title-text-cn">机器人笔记</div>
-        <div class="title-text-en">Robotics;Notes</div>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/ph4" class="nav-item">
-        <div class="title-text-cn">混沌之子</div>
-        <div class="title-text-en">Chaos;Child</div>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/ph5" class="nav-item">
-        <div class="title-text-cn">超自然九人组</div>
-        <div class="title-text-en">Occultic;Nine</div>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/ph6" class="nav-item">
-        <div class="title-text-cn">匿名代码</div>
-        <div class="title-text-en">Amonymous;Code</div>
+      <nuxt-link tag="li" class="nav-item" v-for="nav in navGroup" :key="nav.title" :to="nav.href">
+        <div class="title-text-cn">{{ nav.title }}</div>
+        <div class="title-text-en">{{ nav.subTitle }}</div>
       </nuxt-link>
       <div class="hr"></div>
       <nuxt-link tag="li" to="/ph7" class="nav-item">创建账户</nuxt-link>
@@ -37,7 +17,44 @@
 </template>
 
 <script>
-
+  export default {
+    data() {
+      return {
+        navGroup: [
+          {
+            title: '混沌之脑',
+            subTitle: 'Chaos;Head',
+            href: '/ph2'
+          },
+          {
+            title: '命运石之门',
+            subTitle: 'Steins;Gate',
+            href: '/steins-gate'
+          },
+          {
+            title: '机器人笔记',
+            subTitle: 'Robotics;Notes',
+            href: '/ph3'
+          },
+          {
+            title: '混沌之子',
+            subTitle: 'Chaos;Child',
+            href: '/ph4'
+          },
+          {
+            title: '超自然九人组',
+            subTitle: 'Occultic;Nine',
+            href: '/ph5'
+          },
+          {
+            title: '匿名代码',
+            subTitle: 'Amonymous;Code',
+            href: '/ph6'
+          },
+        ]
+      };
+    }
+  };
 </script>
 
 <style lang="scss">
