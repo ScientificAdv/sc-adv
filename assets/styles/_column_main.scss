@@ -68,7 +68,7 @@
 
 
 .category-list {
-    padding: 0 0px 20px;
+    padding-bottom: 50px;
 
     .list-item-container {
         padding: 5px;
@@ -83,8 +83,6 @@
         box-sizing: border-box;
         position: relative;
         cursor: pointer;
-
-
 
         .list-item-shade,
         .item-title {
