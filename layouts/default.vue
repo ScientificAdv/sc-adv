@@ -5,7 +5,9 @@
     </div>
     <div class="page-content">
       <top-nav></top-nav>
-      <nuxt />
+      <main class="page-content-main">
+        <nuxt />
+      </main>
       <page-footer></page-footer>
     </div>
   </div>
@@ -39,7 +41,10 @@
   .left-nav {
     width: 180px;
     float: left;
-    position: fixed;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
     z-index: 10000;
   }
 
@@ -48,5 +53,9 @@
     position: relative;
     margin-left: 180px;
     padding-top: 60px;
+  }
+
+  .page-content-main {
+    min-height: 700px;
   }
 </style>

@@ -4,9 +4,9 @@
       <p>本页面最后编辑于2019-10-1</p>
       <p>除非另有声明，否则以非盈利的模式共享授权</p>
       <div class="d-flex">
-        <nuxt-link class="item" to="/">隐私政策</nuxt-link>
-        <nuxt-link class="item" to="/">科学ADV</nuxt-link>
-        <nuxt-link class="item" to="/">中文wiki免责声明</nuxt-link>
+        <nuxt-link class="footer-nav-item" to="/">隐私政策</nuxt-link>
+        <nuxt-link class="footer-nav-item" to="/">科学ADV</nuxt-link>
+        <nuxt-link class="footer-nav-item" to="/">中文wiki免责声明</nuxt-link>
       </div>
     </div>
     <div class="copy-right-block">
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 15px 15px 50px;
+    padding: 30px 15px 80px;
     background-color: #000;
     color: #fff;
     box-sizing: border-box;
@@ -38,7 +38,11 @@
     .left-block {
       font-size: 0.8em;
 
-      .item {
+      & > p {
+        margin-top: 0;
+      }
+
+      .footer-nav-item {
         margin-right: 1em;
         color: #eee;
       }

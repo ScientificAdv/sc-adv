@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <p>Ouch,找不到网页</p>
-    <div class="placeholder" style="min-height:500px"></div>
+  <div class="error-page-container container">
+    <h1>404 Not Found</h1>
+    <p>Ouch,找不到网页了</p>
   </div>
 </template>
 
@@ -15,5 +15,5 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
 </style>
