@@ -3,11 +3,12 @@
     <div class="menu">
       <ul class="nav-list">
         <li>作品中心</li>
-        <li>人物介绍</li>
+        <li>角色汇总</li>
+        <li>游戏</li>
         <li>动画</li>
         <li>漫画</li>
         <li>广播剧</li>
-        <li>小说</li>
+        <li>官方小说</li>
         <li>音乐</li>
       </ul>
     </div>
