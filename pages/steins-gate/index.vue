@@ -50,7 +50,7 @@
       <div class="section-block">
         <h2 class="title">
           <span>作品分类</span>
-          <span class="sub-title-text">Categroy</span>
+          <span class="sub-title-text">Category</span>
         </h2>
         <div class="category-list row">
           <nuxt-link
