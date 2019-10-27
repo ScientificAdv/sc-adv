@@ -38,16 +38,6 @@
     width: 100%;
   }
 
-  .left-nav {
-    width: 180px;
-    float: left;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    z-index: 10000;
-  }
-
   .page-content {
     background-color: #fff;
     position: relative;

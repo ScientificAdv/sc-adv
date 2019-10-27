@@ -8,8 +8,14 @@
         <i class="iconfont icondown" v-if="item.is_dropdown"></i>
       </nuxt-link>
     </ul>
-    <div class="search-box">
-      <input class="input-box" v-model="searchTxt" placeholder="在维基中搜索" />
+    <div class="search-box" :class="{'focus': isSearchFocus}">
+      <input
+        class="input-box"
+        v-model="searchTxt"
+        placeholder="在维基中搜索"
+        @focus="isSearchFocus = true"
+        @blur="isSearchFocus = false"
+      />
     </div>
   </nav>
 </template>
@@ -21,6 +27,7 @@
     data() {
       return {
         searchTxt: '',
+        isSearchFocus: false,
         navItems: [
           {
             text: '游戏',
@@ -98,28 +105,50 @@
     }
 
     .search-box {
-      margin-left: 100px;
-      border-left: 3px solid #000;
-      border-bottom: 3px solid #000;
+      margin-left: 10px;
+      border: 1px solid #444;
+      box-shadow: -1px 1px 0 0 #222;
       padding: 8px 5px;
       background-color: #fefefe;
       background-image: url("~assets/img/ui/search.svg");
       background-size: 16px;
       background-position: 7px center;
       background-repeat: no-repeat;
-    }
+      transition: box-shadow 0.15s ease, border-color 0.15s ease;
 
-    .input-box {
-      padding: 8px 5px 8px 25px;
-      border: 0;
-      height: 20px;
-      line-height: 20px;
-      outline: none;
-      font-size: 14px;
-      color: #000;
-      background-color: transparent;
-      font-weight: 500;
-      min-width: 200px;
+      .input-box {
+        padding: 8px 5px 8px 25px;
+        border: 0;
+        height: 20px;
+        line-height: 20px;
+        outline: none;
+        font-size: 14px;
+        background-color: transparent;
+        font-weight: 500;
+        min-width: 200px;
+      }
+
+      i,
+      .input-box {
+        color: #444;
+        transition: color 0.15s ease;
+      }
+
+      &:hover,
+      &.focus {
+        border-color: #000;
+        transition: border-color 0.15s ease;
+        .input-box,
+        i {
+          color: #000;
+          transition: color 0.15s ease;
+        }
+      }
+
+      &.focus {
+        box-shadow: -3px 3px 0 0 #000;
+        transition: box-shadow 0.15s ease, border-color 0.15s ease;
+      }
     }
   }
 </style>

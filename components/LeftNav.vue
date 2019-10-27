@@ -76,6 +76,13 @@
   .left-nav {
     background-color: #000;
     padding-top: 10px;
+    width: 180px;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 10000;
   }
 
   .logo {
