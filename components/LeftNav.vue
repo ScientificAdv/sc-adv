@@ -2,16 +2,31 @@
   <div id="leftNav" class="left-nav">
     <div class="logo">logo</div>
     <ul class="nav-item-list">
-      <nuxt-link tag="li" to="/" class="nav-item" exact>首页</nuxt-link>
-      <nuxt-link tag="li" to="/ph1" class="nav-item">人物导航</nuxt-link>
-      <div class="hr"></div>
-      <nuxt-link tag="li" class="nav-item" v-for="nav in navGroup" :key="nav.title" :to="nav.href">
-        <div class="title-text-cn">{{ nav.title }}</div>
-        <div class="title-text-en">{{ nav.subTitle }}</div>
+      <nuxt-link tag="li" to="/" class="nav-item" exact>
+        <div class="nav-item-content">首页</div>
+        <div class="nav-item-shade"></div>
+      </nuxt-link>
+      <nuxt-link tag="li" to="/ph1" class="nav-item">
+        <div class="nav-item-content">人物导航</div>
+        <div class="nav-item-shade"></div>
       </nuxt-link>
       <div class="hr"></div>
-      <nuxt-link tag="li" to="/ph7" class="nav-item">创建账户</nuxt-link>
-      <nuxt-link tag="li" to="/ph8" class="nav-item">登陆</nuxt-link>
+      <nuxt-link tag="li" class="nav-item" v-for="nav in navGroup" :key="nav.title" :to="nav.href">
+        <div class="nav-item-content">
+          <div class="text-cn">{{ nav.title }}</div>
+          <div class="text-en">{{ nav.subTitle }}</div>
+        </div>
+        <div class="nav-item-shade"></div>
+      </nuxt-link>
+      <div class="hr"></div>
+      <nuxt-link tag="li" to="/ph7" class="nav-item">
+        <div class="nav-item-content">创建账户</div>
+        <div class="nav-item-shade"></div>
+      </nuxt-link>
+      <nuxt-link tag="li" to="/ph8" class="nav-item">
+        <div class="nav-item-content">登陆</div>
+        <div class="nav-item-shade"></div>
+      </nuxt-link>
     </ul>
   </div>
 </template>
@@ -86,6 +101,7 @@
   }
 
   .nav-item {
+    position: relative;
     display: block;
     background-color: #000;
     padding: 15px 20px 0;
@@ -97,19 +113,47 @@
     list-style: none;
     white-space: nowrap;
     margin-bottom: 10px;
-    transition: all 0.15s ease;
+    transition: background-color 0.15s ease;
 
-    .title-text-en {
-      margin-top: 2px;
-      font-size: 80%;
+    .nav-item-content,
+    .nav-item-shade {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .nav-item-content {
+      top: 15px;
+      left: 20px;
+      z-index: 2;
+
+      .text-en {
+        margin-top: 2px;
+        font-size: 80%;
+      }
+    }
+
+    .nav-item-shade {
+      width: 0;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background-color: transparent;
+      transition: background-color 0.15s ease, width 0.2s ease;
     }
   }
 
-  .nav-item.nuxt-link-exact-active,
-  .nav-item.nuxt-link-active,
   .nav-item:hover {
-    background-color: #2196f3;
-    color: #fff;
-    width: 105%;
+    background-color: #222;
+    transition: background-color 0.15s ease;
+  }
+
+  .nav-item.nuxt-link-exact-active,
+  .nav-item.nuxt-link-active {
+    .nav-item-shade {
+      background-color: #2196f3;
+      width: 105%;
+      transition: background-color 0.2s ease, width 0.2s ease;
+    }
   }
 </style>

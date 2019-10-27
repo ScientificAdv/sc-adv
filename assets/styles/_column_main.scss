@@ -102,11 +102,12 @@
             font-size: 30px;
             margin: 0;
             z-index: 2;
-            left: 5px;
-            bottom: 5px;
+            left: 7px;
+            bottom: 7px;
             background-color: #000;
             padding: 20px 15px 5px 5px;
             min-width: 5em;
+            transition: all 0.15s ease;
 
             .item-title-text {
                 display: inline-block;
@@ -114,8 +115,11 @@
         }
 
         &:hover {
-            .list-item-shade {
-                opacity: .5;
+            .item-title {
+                background-color: #222;
+                left: 5px;
+                bottom: 5px;
+                transition: all 0.15s ease;
             }
         }
     }
