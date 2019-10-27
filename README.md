@@ -29,6 +29,9 @@ $ yarn start
 $ yarn generate
 ```
 
+## 设计规范参考
+![adv-设计参考](https://github.com/hyggerZheuang/sc-adv/blob/master/doc/adv-设计参考.png)
+
 ## 参考文档
 
 [Nuxt.js文档](https://nuxtjs.org)
