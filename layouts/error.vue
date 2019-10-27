@@ -7,6 +7,9 @@
 
 <script>
   export default {
+    transition: {
+      mode: 'out-in'
+    },
     head() {
       return {
         title: '出错了'

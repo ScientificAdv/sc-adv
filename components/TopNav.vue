@@ -138,7 +138,8 @@
       }
 
       i,
-      .input-box {
+      .input-box,
+      .input-box::placeholder {
         color: #444;
         transition: color 0.15s ease;
       }
@@ -164,7 +165,7 @@
       position: absolute;
       left: 0;
       width: 100%;
-      background-color: #000;
+      background-color: transparent;
       border-color: transparent;
 
       ul.nav-list {
@@ -178,18 +179,14 @@
         box-shadow: -1px 1px 0 0 #eee;
 
         i,
-        .input-box {
+        .input-box,
+        .input-box::placeholder {
           color: #fff;
         }
 
         &:hover,
         &.focus {
           border-color: #fff;
-
-          .input-box,
-          i {
-            color: #fff;
-          }
         }
 
         &.focus {

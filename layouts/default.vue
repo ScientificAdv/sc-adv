@@ -6,7 +6,7 @@
     <div class="page-content">
       <top-nav></top-nav>
       <main class="page-content-main">
-        <nuxt />
+        <nuxt class="my-page" />
       </main>
       <page-footer></page-footer>
     </div>
@@ -19,6 +19,9 @@
   import PageFooter from "~/components/Footer.vue";
 
   export default {
+    transition: {
+      mode: 'out-in'
+    },
     components: {
       TopNav,
       LeftNav,
@@ -42,10 +45,13 @@
     background-color: #fff;
     position: relative;
     margin-left: 180px;
-    padding-top: 60px;
   }
 
   .page-content-main {
-    min-height: 700px;
+    .my-page {
+      padding-top: 60px;
+      min-height: 760px;
+      position: relative;
+    }
   }
 </style>
