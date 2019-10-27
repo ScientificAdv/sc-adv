@@ -3,7 +3,7 @@ export default {
      ** Headers of the page
      */
     head: {
-        title: '科学ADV中文维基',
+        titleTemplate: '%s | 科学ADV中文Wiki',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,6 +23,9 @@ export default {
      ** Global CSS
      */
     css: [],
+    router: {
+        middleware: ['meta']
+    },
     /*
      ** Plugins to load before mounting the App
      */

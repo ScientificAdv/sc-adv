@@ -1,5 +1,5 @@
 <template>
-  <nav id="topNav" class="top-nav">
+  <nav id="topNav" class="top-nav" :class="{'no-nav': isNavHiden}">
     <ul class="nav-list">
       <li>作品中心</li>
       <li>角色汇总</li>
@@ -9,6 +9,7 @@
       </nuxt-link>
     </ul>
     <div class="search-box" :class="{'focus': isSearchFocus}">
+      <i class="iconfont iconsearch"></i>
       <input
         class="input-box"
         v-model="searchTxt"
@@ -63,6 +64,15 @@
       };
     },
     methods: {
+    },
+    computed: {
+      isNavHiden: function () {
+        let state = false;
+        if (this.$store.state.meta) {
+          state = this.$store.state.meta.isHideTopNav;
+        }
+        return state;
+      }
     }
   };
 </script>
@@ -81,16 +91,19 @@
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0 30px;
+    flex-wrap: nowrap;
 
     ul.nav-list {
       display: flex;
       justify-content: flex-start;
       align-items: baseline;
       flex-wrap: wrap;
+      flex-shrink: 0;
       background-color: #fff;
-      border-bottom: 0;
+      overflow: auto; // 调试用
 
       li {
+        display: inline-block;
         height: 60px;
         line-height: 60px;
         margin: 0;
@@ -108,16 +121,12 @@
       margin-left: 10px;
       border: 1px solid #444;
       box-shadow: -1px 1px 0 0 #222;
-      padding: 8px 5px;
-      background-color: #fefefe;
-      background-image: url("~assets/img/ui/search.svg");
-      background-size: 16px;
-      background-position: 7px center;
-      background-repeat: no-repeat;
+      padding: 8px 5px 8px 15px;
+      background-color: #fff;
       transition: box-shadow 0.15s ease, border-color 0.15s ease;
 
       .input-box {
-        padding: 8px 5px 8px 25px;
+        padding: 8px 5px 8px 2px;
         border: 0;
         height: 20px;
         line-height: 20px;
@@ -148,6 +157,44 @@
       &.focus {
         box-shadow: -3px 3px 0 0 #000;
         transition: box-shadow 0.15s ease, border-color 0.15s ease;
+      }
+    }
+
+    &.no-nav {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      border-color: transparent;
+
+      ul.nav-list {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .search-box {
+        background-color: transparent;
+        border-color: #eee;
+        box-shadow: -1px 1px 0 0 #eee;
+
+        i,
+        .input-box {
+          color: #fff;
+        }
+
+        &:hover,
+        &.focus {
+          border-color: #fff;
+
+          .input-box,
+          i {
+            color: #fff;
+          }
+        }
+
+        &.focus {
+          box-shadow: -3px 3px 0 0 #fff;
+        }
       }
     }
   }
