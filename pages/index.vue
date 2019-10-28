@@ -170,9 +170,10 @@
       position: absolute;
     }
     .gears-group {
-      bottom: 165px;
-      right: 190px;
+      bottom: 215px;
+      right: 340px;
       opacity: 0.9;
+      transform: scale(1.75);
 
       .circle-lg {
         top: 0;
@@ -205,7 +206,7 @@
     .gear-sm {
       opacity: 0.8;
       bottom: -15px;
-      right: 200px;
+      right: 210px;
       width: 50px;
       height: 50px;
       & > img {
