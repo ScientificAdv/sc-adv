@@ -2,21 +2,15 @@
   <div id="leftNav" class="left-nav">
     <div class="logo">logo</div>
     <ul class="nav-item-list">
-      <li class="nav-item">
-        <nuxt-link to="/" class="nav-item-link" exact>
-          <div class="nav-item-content">首页</div>
-          <div class="nav-item-shade"></div>
-        </nuxt-link>
-      </li>
-      <li class="nav-item">
-        <nuxt-link to="/ph1" class="nav-item-link">
-          <div class="nav-item-content">人物导航</div>
+      <li class="nav-item" v-for="nav in primaryGroup" :key="nav.title">
+        <nuxt-link class="nav-item-link" :to="nav.href" :exact="nav.is_exact">
+          <div class="nav-item-content">{{ nav.title }}</div>
           <div class="nav-item-shade"></div>
         </nuxt-link>
       </li>
       <div class="hr"></div>
       <li class="nav-item" v-for="nav in navGroup" :key="nav.title">
-        <nuxt-link class="nav-item-link" :to="nav.href">
+        <nuxt-link class="nav-item-link" :to="nav.href" :exact="nav.is_exact">
           <div class="nav-item-content">
             <div class="text-cn">{{ nav.title }}</div>
             <div class="text-en">{{ nav.subTitle }}</div>
@@ -25,15 +19,9 @@
         </nuxt-link>
       </li>
       <div class="hr"></div>
-      <li class="nav-item">
-        <nuxt-link to="/ph7" class="nav-item-link">
-          <div class="nav-item-content">创建账户</div>
-          <div class="nav-item-shade"></div>
-        </nuxt-link>
-      </li>
-      <li class="nav-item">
-        <nuxt-link to="/ph8" class="nav-item-link">
-          <div class="nav-item-content">登陆</div>
+      <li class="nav-item" v-for="nav in adminGroup" :key="nav.title">
+        <nuxt-link class="nav-item-link" :to="nav.href" :exact="nav.is_exact">
+          <div class="nav-item-content">{{ nav.title }}</div>
           <div class="nav-item-shade"></div>
         </nuxt-link>
       </li>
@@ -45,37 +33,67 @@
   export default {
     data() {
       return {
+        primaryGroup: [
+          {
+            title: '首页',
+            href: '/',
+            is_exact: true
+          },
+          {
+            title: '人物导航',
+            href: '/ph1',
+            is_exact: false
+          }
+        ],
         navGroup: [
           {
             title: '混沌之脑',
             subTitle: 'Chaos;Head',
-            href: '/ph2'
+            href: '/ph2',
+            is_exact: false
           },
           {
             title: '命运石之门',
             subTitle: 'Steins;Gate',
-            href: '/steins-gate'
+            href: '/steins-gate',
+            is_exact: false
           },
           {
             title: '机器人笔记',
             subTitle: 'Robotics;Notes',
-            href: '/ph3'
+            href: '/ph3',
+            is_exact: false
           },
           {
             title: '混沌之子',
             subTitle: 'Chaos;Child',
-            href: '/ph4'
+            href: '/ph4',
+            is_exact: false
           },
           {
             title: '超自然九人组',
             subTitle: 'Occultic;Nine',
-            href: '/ph5'
+            href: '/ph5',
+            is_exact: false
           },
           {
             title: '匿名代码',
             subTitle: 'Anonymous;Code',
-            href: '/ph6'
+            href: '/ph6',
+            is_exact: false
           }
+        ],
+        adminGroup: [
+          {
+            title: '创建账户',
+            href: '/ph7',
+            is_exact: false
+          },
+          {
+            title: '登陆',
+            href: '/ph8',
+            is_exact: false
+          },
         ]
       };
     }
