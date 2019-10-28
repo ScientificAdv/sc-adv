@@ -60,7 +60,7 @@
               tag="div"
             >
               <div class="list-item" :style="{'background-image': `url(${item.image})`}">
-                <h3 class="item-title">
+                <h3 class="item-title" :style="{'background-color': item.color}">
                   <span class="item-title-text">{{ item.title }}</span>
                   <div class="item-subtitle-text">{{ item.subTitle }}</div>
                 </h3>
@@ -92,37 +92,43 @@
             title: '混沌之脑',
             subTitle: 'Chaos;Head',
             image: require('~/assets/img/ch/ch_game_cover.jpg'),
-            to: '/'
+            to: '/',
+            color: '#b29c83'
           },
           {
             title: '命运石之门',
             subTitle: 'Steins;Gate',
             image: require('~/assets/img/sg/sg_animate_cover.jpg'),
-            to: '/steins-gate'
+            to: '/steins-gate',
+            color: '#7d87b9'
           },
           {
             title: '机器人笔记',
             subTitle: 'Robotics;Notes',
             image: require('~/assets/img/rn/rn_game_cover.jpg'),
-            to: '/'
+            to: '/',
+            color: '#2d65ad'
           },
           {
             title: '混沌之子',
             subTitle: 'Chaos;Child',
             image: require('~/assets/img/cc/cc_game_cover.png'),
-            to: '/'
+            to: '/',
+            color: '#828982'
           },
           {
             title: '超自然九人组',
             subTitle: 'Occultic;Nine',
             image: require('~/assets/img/on/on_anime_cover.jpg'),
-            to: '/'
+            to: '/',
+            color: '#bebf00'
           },
           {
             title: '匿名代码',
             subTitle: 'Anonymous;Code',
             image: require('~/assets/img/ac/ac_game_cover.JPG'),
-            to: '/'
+            to: '/',
+            color: '#b7aaa1'
           }
         ]
       }
@@ -230,14 +236,18 @@
 
   .category-list .list-item {
     height: 360px;
-
     .item-subtitle-text {
       font-weight: 500;
-      font-size: 70%;
+      font-size: 60%;
     }
 
     .list-item-shade {
       opacity: 0.5;
+    }
+    &:hover {
+      .item-title {
+        opacity: 0.95;
+      }
     }
   }
 </style>
