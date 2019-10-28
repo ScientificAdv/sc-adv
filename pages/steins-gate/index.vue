@@ -40,7 +40,7 @@
             :key="item.title"
           >
             <div class="wiki-item">
-              <nuxt-link class="item-title" :to="item.to" :title="item.title" tag="div">
+              <nuxt-link class="item-title" :to="item.to" :title="item.title">
                 <span class="item-title-text">{{ item.title }}</span>
               </nuxt-link>
             </div>
@@ -58,8 +58,7 @@
             v-for="item in categoryItems"
             :key="item.title"
             :to="item.to"
-            :title="item.title"
-            tag="div"
+            :title="item.title" 
           >
             <div class="list-item" :style="{'background-image': `url(${item.image})`}">
               <h3 class="item-title">
@@ -82,7 +81,7 @@
             :key="item.title"
           >
             <div class="wiki-item">
-              <nuxt-link class="item-title" :to="item.to" :title="item.title" tag="div">
+              <nuxt-link class="item-title" :to="item.to" :title="item.title">
                 <span class="item-title-text">{{ item.title }}</span>
               </nuxt-link>
             </div>
@@ -101,7 +100,7 @@
             :key="item.title"
           >
             <div class="wiki-item">
-              <nuxt-link class="item-title" :to="item.to" :title="item.title" tag="div">
+              <nuxt-link class="item-title" :to="item.to" :title="item.title">
                 <span class="item-title-text">{{ item.title }}</span>
               </nuxt-link>
             </div>
@@ -120,7 +119,7 @@
             :key="item.title"
           >
             <div class="wiki-item">
-              <nuxt-link class="item-title" :to="item.to" :title="item.title" tag="div">
+              <nuxt-link class="item-title" :to="item.to" :title="item.title">
                 <span class="item-title-text">{{ item.title }}</span>
               </nuxt-link>
             </div>
@@ -139,7 +138,7 @@
             :key="item.title"
           >
             <div class="wiki-item">
-              <nuxt-link class="item-title" :to="item.to" :title="item.title" tag="div">
+              <nuxt-link class="item-title" :to="item.to" :title="item.title">
                 <span class="item-title-text">{{ item.title }}</span>
               </nuxt-link>
             </div>
@@ -158,7 +157,7 @@
             :key="item.title"
           >
             <div class="wiki-item">
-              <nuxt-link class="item-title" :to="item.to" :title="item.title" tag="div">
+              <nuxt-link class="item-title" :to="item.to" :title="item.title">
                 <span class="item-title-text">{{ item.title }}</span>
               </nuxt-link>
             </div>
@@ -177,7 +176,7 @@
             :key="item.title"
           >
             <div class="wiki-item">
-              <nuxt-link class="item-title" :to="item.to" :title="item.title" tag="div">
+              <nuxt-link class="item-title" :to="item.to" :title="item.title">
                 <span class="item-title-text">{{ item.title }}</span>
               </nuxt-link>
             </div>

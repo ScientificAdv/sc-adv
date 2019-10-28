@@ -25,7 +25,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .footer {
     display: flex;
     justify-content: space-between;
@@ -34,6 +34,11 @@
     background-color: #000;
     color: #fff;
     box-sizing: border-box;
+
+    a:hover {
+      opacity: 0.8;
+      border-bottom: 1px solid;
+    }
 
     .left-block {
       font-size: 0.8em;

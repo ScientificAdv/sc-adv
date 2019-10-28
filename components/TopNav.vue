@@ -1,12 +1,12 @@
 <template>
   <nav id="topNav" class="top-nav" :class="{'no-nav': isNavHiden}">
     <ul class="nav-list">
-      <li>作品中心</li>
-      <li>角色汇总</li>
-      <nuxt-link v-for="item in navItems" :key="item.text" :to="item.to" tag="li">
-        {{ item.text }}
-        <i class="iconfont icondown" v-if="item.is_dropdown"></i>
-      </nuxt-link>
+      <li v-for="item in navItems" :key="item.text">
+        <nuxt-link :to="item.to" :exact="item.is_exact">
+          <span>{{ item.text }}</span>
+          <i class="iconfont icondown" v-if="item.is_dropdown"></i>
+        </nuxt-link>
+      </li>
     </ul>
     <div class="search-box" :class="{'focus': isSearchFocus}">
       <i class="iconfont iconsearch"></i>
@@ -31,34 +31,52 @@
         isSearchFocus: false,
         navItems: [
           {
-            text: '游戏',
+            text: '作品中心',
             to: '/steins-gate',
-            is_dropdown: true
+            is_dropdown: false,
+            is_exact: true
+          },
+          {
+            text: '角色汇总',
+            to: '/steins-gate/character',
+            is_dropdown: false,
+            is_exact: false
+          },
+          {
+            text: '游戏',
+            to: '/steins-gate/game',
+            is_dropdown: true,
+            is_exact: false
           },
           {
             text: '动画',
-            to: '/steins-gate',
-            is_dropdown: true
+            to: '/steins-gate/anime',
+            is_dropdown: true,
+            is_exact: false
           },
           {
             text: '漫画',
-            to: '/steins-gate',
-            is_dropdown: true
+            to: '/steins-gate/comic',
+            is_dropdown: true,
+            is_exact: false
           },
           {
             text: '广播剧',
-            to: '/steins-gate',
-            is_dropdown: true
+            to: '/steins-gate/drama',
+            is_dropdown: true,
+            is_exact: false
           },
           {
             text: '官方小说',
-            to: '/steins-gate',
-            is_dropdown: true
+            to: '/steins-gate/novel',
+            is_dropdown: true,
+            is_exact: false
           },
           {
             text: '音乐',
-            to: '/steins-gate',
-            is_dropdown: true
+            to: '/steins-gate/ablum',
+            is_dropdown: true,
+            is_exact: false
           },
         ]
       };
@@ -114,6 +132,14 @@
         transition: all 0.15s;
         box-sizing: border-box;
         margin-right: 30px;
+
+        a.nuxt-link-exact-active,
+        a.nuxt-link-active {
+          & > span {
+            font-weight: 800;
+            border-bottom: #303133 solid 2px;
+          }
+        }
       }
     }
 

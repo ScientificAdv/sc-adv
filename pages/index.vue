@@ -57,7 +57,6 @@
               :key="item.title"
               :to="item.to"
               :title="item.title"
-              tag="div"
             >
               <div class="list-item" :style="{'background-image': `url(${item.image})`}">
                 <h3 class="item-title" :style="{'background-color': item.color}">

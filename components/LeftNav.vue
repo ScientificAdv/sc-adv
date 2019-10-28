@@ -2,31 +2,41 @@
   <div id="leftNav" class="left-nav">
     <div class="logo">logo</div>
     <ul class="nav-item-list">
-      <nuxt-link tag="li" to="/" class="nav-item" exact>
-        <div class="nav-item-content">首页</div>
-        <div class="nav-item-shade"></div>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/ph1" class="nav-item">
-        <div class="nav-item-content">人物导航</div>
-        <div class="nav-item-shade"></div>
-      </nuxt-link>
+      <li class="nav-item">
+        <nuxt-link to="/" class="nav-item-link" exact>
+          <div class="nav-item-content">首页</div>
+          <div class="nav-item-shade"></div>
+        </nuxt-link>
+      </li>
+      <li class="nav-item">
+        <nuxt-link to="/ph1" class="nav-item-link">
+          <div class="nav-item-content">人物导航</div>
+          <div class="nav-item-shade"></div>
+        </nuxt-link>
+      </li>
       <div class="hr"></div>
-      <nuxt-link tag="li" class="nav-item" v-for="nav in navGroup" :key="nav.title" :to="nav.href">
-        <div class="nav-item-content">
-          <div class="text-cn">{{ nav.title }}</div>
-          <div class="text-en">{{ nav.subTitle }}</div>
-        </div>
-        <div class="nav-item-shade"></div>
-      </nuxt-link>
+      <li class="nav-item" v-for="nav in navGroup" :key="nav.title">
+        <nuxt-link class="nav-item-link" :to="nav.href">
+          <div class="nav-item-content">
+            <div class="text-cn">{{ nav.title }}</div>
+            <div class="text-en">{{ nav.subTitle }}</div>
+          </div>
+          <div class="nav-item-shade"></div>
+        </nuxt-link>
+      </li>
       <div class="hr"></div>
-      <nuxt-link tag="li" to="/ph7" class="nav-item">
-        <div class="nav-item-content">创建账户</div>
-        <div class="nav-item-shade"></div>
-      </nuxt-link>
-      <nuxt-link tag="li" to="/ph8" class="nav-item">
-        <div class="nav-item-content">登陆</div>
-        <div class="nav-item-shade"></div>
-      </nuxt-link>
+      <li class="nav-item">
+        <nuxt-link to="/ph7" class="nav-item-link">
+          <div class="nav-item-content">创建账户</div>
+          <div class="nav-item-shade"></div>
+        </nuxt-link>
+      </li>
+      <li class="nav-item">
+        <nuxt-link to="/ph8" class="nav-item-link">
+          <div class="nav-item-content">登陆</div>
+          <div class="nav-item-shade"></div>
+        </nuxt-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -111,16 +121,22 @@
     position: relative;
     display: block;
     background-color: #000;
-    padding: 15px 20px 0;
-    font-size: 14px;
-    color: #fff;
     cursor: pointer;
     box-sizing: border-box;
     height: 56px;
     list-style: none;
-    white-space: nowrap;
     margin-bottom: 10px;
     transition: background-color 0.15s ease;
+
+    .nav-item-link {
+      padding: 15px 20px 0;
+      display: block;
+      position: relative;
+      color: #fff;
+      font-size: 14px;
+      height: 56px;
+      white-space: nowrap;
+    }
 
     .nav-item-content,
     .nav-item-shade {
@@ -155,8 +171,8 @@
     transition: background-color 0.15s ease;
   }
 
-  .nav-item.nuxt-link-exact-active,
-  .nav-item.nuxt-link-active {
+  .nav-item-link.nuxt-link-exact-active,
+  .nav-item-link.nuxt-link-active {
     .nav-item-shade {
       background-color: #2196f3;
       width: 105%;
