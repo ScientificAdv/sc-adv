@@ -117,6 +117,12 @@
             subTitle: 'Occultic;Nine',
             image: require('~/assets/img/on/on_anime_cover.jpg'),
             to: '/'
+          },
+          {
+            title: '匿名代码',
+            subTitle: 'Anonymous;Code',
+            image: require('~/assets/img/ac/ac_game_cover.JPG'),
+            to: '/'
           }
         ]
       }
