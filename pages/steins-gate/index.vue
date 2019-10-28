@@ -9,7 +9,7 @@
           <span class="sub-title-text">Intro</span>
         </h2>
         <div class="row">
-          <div class="intro-item-block col-lg-6 col-md-12">
+          <div class="intro-item-block col-lg-6 col-12">
             <div class="intro-content">
               <p
                 class="drop-cap"
@@ -18,7 +18,7 @@
               <p>冈部伦太郎–中二病的大学生，自称疯狂科学家-凤凰院凶真。他在“未来机械研究所”里发明了“电话烤箱（暂定）”，这个道具有着是类似时空旅行的惊人机能，能够对过去寄送电子邮件。某日，主角遇到了18岁的天才少女-牧瀬红莉栖，但是，就在数个小时前，主角才亲眼目击到她在大厦的屋顶遭到杀害……故事由此展开。</p>
             </div>
           </div>
-          <div class="img-container intro-item-block col-lg-6 col-md-12">
+          <div class="img-container intro-item-block col-lg-6 col-12">
             <div class="img-box">
               <img src="~/assets/img/sg/sg_logo.jpg" alt="steins gate logo" />
             </div>
