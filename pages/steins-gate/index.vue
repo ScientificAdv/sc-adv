@@ -184,7 +184,7 @@
           </div>
         </div>
       </div>
-      <div class="placeholder" style="min-height:200px"></div>
+      <div class="placeholder" style="min-height:150px"></div>
     </div>
   </div>
 </template>

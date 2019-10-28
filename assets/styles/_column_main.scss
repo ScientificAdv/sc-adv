@@ -80,6 +80,7 @@
         color: #fff;
         background-position: center center;
         background-size: cover;
+        background-repeat: no-repeat;
         box-sizing: border-box;
         position: relative;
         cursor: pointer;
@@ -108,7 +109,7 @@
             padding: 20px 15px 5px 5px;
             min-width: 5em;
             box-sizing: border-box;
-            max-width: 150px;
+            max-width: 8em;
             transition: all 0.15s ease;
 
             .item-title-text {

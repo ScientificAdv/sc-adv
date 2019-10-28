@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="placeholder" style="min-height:300px"></div>
     <div class="bg-overlay">
       <div class="dynamic-elements-group">
         <div class="gears-group">
@@ -27,6 +28,50 @@
       </p>
       <p>目前已有2个页面</p>
     </header>
+    <main>
+      <div class="container">
+        <div class="section-block">
+          <h2 class="title">
+            <span>本站公告</span>
+            <span class="sub-title-text">Notice</span>
+          </h2>
+          <p>咕咕咕咕咕</p>
+          <p>咕咕咕</p>
+          <p>咕咕咕咕</p>
+          <p>咕咕咕咕咕？</p>
+          <p>咕咕！</p>
+          <p>咕咕！</p>
+          <p>咕咕咕咕咕？</p>
+          <p>咕咕咕咕。</p>
+          <br />
+        </div>
+        <div class="section-block">
+          <h2 class="title">
+            <span>作品列表</span>
+            <span class="sub-title-text">Works</span>
+          </h2>
+          <div class="category-list row">
+            <nuxt-link
+              class="list-item-container col-lg-4 col-md-6 col-sm-12"
+              v-for="item in workItems"
+              :key="item.title"
+              :to="item.to"
+              :title="item.title"
+              tag="div"
+            >
+              <div class="list-item" :style="{'background-image': `url(${item.image})`}">
+                <h3 class="item-title">
+                  <span class="item-title-text">{{ item.title }}</span>
+                  <div class="item-subtitle-text">{{ item.subTitle }}</div>
+                </h3>
+                <div class="list-item-shade"></div>
+              </div>
+            </nuxt-link>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="placeholder" style="min-height:150px"></div>
   </div>
 </template>
 
@@ -40,10 +85,60 @@
         title: '首页'
       }
     },
+    data() {
+      return {
+        workItems: [
+          {
+            title: '混沌之脑',
+            subTitle: 'Chaos;Head',
+            image: require('~/assets/img/ch/ch_game_cover.jpg'),
+            to: '/'
+          },
+          {
+            title: '命运石之门',
+            subTitle: 'Steins;Gate',
+            image: require('~/assets/img/sg/sg_animate_cover.jpg'),
+            to: '/steins-gate'
+          },
+          {
+            title: '机器人笔记',
+            subTitle: 'Robotics;Notes',
+            image: require('~/assets/img/rn/rn_game_cover.jpg'),
+            to: '/'
+          },
+          {
+            title: '混沌之子',
+            subTitle: 'Chaos;Child',
+            image: require('~/assets/img/cc/cc_game_cover.png'),
+            to: '/'
+          },
+          {
+            title: '超自然九人组',
+            subTitle: 'Occultic;Nine',
+            image: require('~/assets/img/on/on_anime_cover.jpg'),
+            to: '/'
+          }
+        ]
+      }
+    }
   }
 </script>
 
 <style lang="scss" scoped>
+  @import "~/assets/styles/_column_main.scss";
+
+  @keyframes gearRotate {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    50% {
+      -webkit-transform: rotate(180deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
   .header,
   .bg-overlay {
     position: absolute;
@@ -79,7 +174,7 @@
         width: 200px;
         height: 200px;
         & > img {
-          animation: myRotate 12s 0.6s linear infinite;
+          animation: gearRotate 12s 0.6s linear infinite;
         }
       }
       .circle-sm {
@@ -88,7 +183,7 @@
         width: 150px;
         height: 150px;
         & > img {
-          animation: myRotate 15s 0.3s linear infinite;
+          animation: gearRotate 15s 0.3s linear infinite;
         }
       }
       .gear-lg {
@@ -97,7 +192,7 @@
         width: 80px;
         height: 80px;
         & > img {
-          animation: myRotate 10s linear infinite;
+          animation: gearRotate 10s linear infinite;
         }
       }
     }
@@ -108,20 +203,8 @@
       width: 50px;
       height: 50px;
       & > img {
-        animation: myRotate 15s 0.3s linear infinite;
+        animation: gearRotate 15s 0.3s linear infinite;
       }
-    }
-  }
-
-  @keyframes myRotate {
-    0% {
-      -webkit-transform: rotate(0deg);
-    }
-    50% {
-      -webkit-transform: rotate(180deg);
-    }
-    100% {
-      -webkit-transform: rotate(360deg);
     }
   }
 
@@ -135,6 +218,19 @@
     }
     h1 {
       margin: 10px 0;
+    }
+  }
+
+  .category-list .list-item {
+    height: 360px;
+
+    .item-subtitle-text {
+      font-weight: 500;
+      font-size: 70%;
+    }
+
+    .list-item-shade {
+      opacity: 0.5;
     }
   }
 </style>

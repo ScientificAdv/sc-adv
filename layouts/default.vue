@@ -5,9 +5,7 @@
     </div>
     <div class="page-content">
       <top-nav></top-nav>
-      <main class="page-content-main">
-        <nuxt class="my-page" />
-      </main>
+      <nuxt class="page-content-main" />
       <page-footer></page-footer>
     </div>
   </div>
@@ -48,10 +46,8 @@
   }
 
   .page-content-main {
-    .my-page {
-      padding-top: 60px;
-      min-height: 760px;
-      position: relative;
-    }
+    padding-top: 60px;
+    min-height: 760px;
+    position: relative;
   }
 </style>

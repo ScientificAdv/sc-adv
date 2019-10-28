@@ -60,12 +60,7 @@
             title: '超自然九人组',
             subTitle: 'Occultic;Nine',
             href: '/ph5'
-          },
-          {
-            title: '匿名代码',
-            subTitle: 'Amonymous;Code',
-            href: '/ph6'
-          },
+          }
         ]
       };
     }
