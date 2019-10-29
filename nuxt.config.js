@@ -1,4 +1,4 @@
-export default {
+const config = {
     /*
      ** Headers of the page
      */
@@ -54,3 +54,14 @@ export default {
         plugins: []
     }
 }
+
+// 为gh-pages分支添加相对目录（router.base:仓库名)
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+    router: {
+        base: '/sc-adv/'
+    }
+} : {};
+
+const configObj = Object.assign(routerBase, config);
+
+export default configObj;
