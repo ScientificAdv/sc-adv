@@ -24,9 +24,10 @@ $ yarn build
 $ yarn start
 ```
 
-### 生成可在Github Page浏览的静态页面（/dist）
+### 生成&直接部署/dist到Github Pages（不需切换分支，可直接在master分支里操作）
 ``` bash
-$ yarn generate
+$ yarn generate:gh-pages
+$ yarn deploy
 ```
 
 ## 设计规范参考
