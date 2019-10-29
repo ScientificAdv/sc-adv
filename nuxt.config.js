@@ -1,4 +1,4 @@
-const config = {
+export default {
     /*
      ** Headers of the page
      */
@@ -24,7 +24,8 @@ const config = {
      */
     css: [],
     router: {
-        middleware: ['meta']
+        middleware: ['meta'],
+        base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/sc-adv/' : '/'
     },
     /*
      ** Plugins to load before mounting the App
@@ -54,14 +55,3 @@ const config = {
         plugins: []
     }
 }
-
-// 为gh-pages分支添加相对目录（router.base:仓库名)
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-    router: {
-        base: '/sc-adv/'
-    }
-} : {};
-
-const configObj = Object.assign(routerBase, config);
-
-export default configObj;
