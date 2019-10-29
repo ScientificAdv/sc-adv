@@ -47,7 +47,7 @@
     }
 
     .wiki-item {
-        background-color: #2196F3;
+        background-color: #efefef;
         padding-top: 20px;
         padding-right: 15px;
         box-sizing: border-box;
@@ -55,12 +55,12 @@
         transition: background-color .1s ease;
 
         &:hover {
-            background-color: rgb(10, 104, 180);
+            background-color: #d0d0d0;
+            transition: background-color .1s ease;
         }
 
         .item-title {
             display: block;
-            color: #fff;
             margin: 0;
             padding: 0 0 5px 5px;
         }
