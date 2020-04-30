@@ -23,6 +23,7 @@
     "@nuxtjs/axios": "^5.10.3",
     "@nuxtjs/style-resources": "^1.0.0",
     "nuxt": "^2.12.2",
+    "vue-affix": "^0.5.2",
     "yue.css": "^0.4.0"
   },
   "devDependencies": {

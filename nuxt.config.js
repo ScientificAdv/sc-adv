@@ -33,7 +33,7 @@ export default {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: [],
+    plugins: [{ src: '~/plugins/VueAffix.js', ssr: false }],
     /*
      ** Nuxt.js modules
      */
