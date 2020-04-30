@@ -4,6 +4,8 @@
 
 El Psy Kongroo
 
+**[网站链接](https://scientificadv.github.io/sc-adv/)**
+
 **[编写代码前必读](https://github.com/hyggerZheuang/sc-adv/wiki/命名规范)**
 
 ## 安装设置
