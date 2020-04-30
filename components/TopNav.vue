@@ -170,7 +170,6 @@
         transition: color 0.15s ease;
       }
 
-      &:hover,
       &.focus {
         border-color: #000;
         transition: border-color 0.15s ease;
