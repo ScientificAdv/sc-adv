@@ -23,7 +23,8 @@ export default {
      ** Global CSS
      */
     css: [
-        { src: 'yue.css/yue.css', lang: 'css' }
+        { src: 'yue.css/yue.css', lang: 'css' },
+        { src: '~/assets/styles/global/global.scss', lang: 'scss' }
     ],
     router: {
         middleware: ['meta'],
@@ -37,9 +38,6 @@ export default {
      ** Nuxt.js modules
      */
     modules: ['@nuxtjs/style-resources'],
-    styleResources: {
-        scss: '~/assets/styles/global/*.scss'
-    },
     /*
      ** Build configuration
      */

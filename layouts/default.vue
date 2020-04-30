@@ -28,26 +28,3 @@
   }
 
 </script>
-
-<style lang="scss">
-  .page-container {
-    background-color: #000;
-    font-family: "Avenir", Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
-    width: 100%;
-  }
-
-  .page-content {
-    background-color: #fff;
-    position: relative;
-    margin-left: 180px;
-  }
-
-  .page-content-main {
-    padding-top: 60px;
-    min-height: 760px;
-    position: relative;
-  }
-</style>

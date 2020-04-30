@@ -100,7 +100,7 @@
   };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .left-nav {
     background-color: #000;
     padding-top: 10px;

@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <header class="header">
+    <header class="header yue">
       <p>欢迎来到</p>
       <h1>科学ADV中文Wiki</h1>
       <p>
@@ -36,15 +36,17 @@
             <span>本站公告</span>
             <span class="sub-title-text">Notice</span>
           </h2>
-          <p>咕咕咕咕咕</p>
-          <p>咕咕咕</p>
-          <p>咕咕咕咕</p>
-          <p>咕咕咕咕咕？</p>
-          <p>咕咕！</p>
-          <p>咕咕！</p>
-          <p>咕咕咕咕咕？</p>
-          <p>咕咕咕咕。</p>
-          <p>—— by 300鸽子委员会</p>
+          <section class="yue">
+            <p>咕咕咕咕咕</p>
+            <p>咕咕咕</p>
+            <p>咕咕咕咕</p>
+            <p>咕咕咕咕咕？</p>
+            <p>咕咕！</p>
+            <p>咕咕！</p>
+            <p>咕咕咕咕咕？</p>
+            <p>咕咕咕咕。</p>
+            <p>—— by 300鸽子委员会</p>
+          </section>
           <br />
         </div>
         <div class="section-block">
@@ -232,6 +234,10 @@
     }
     h1 {
       margin: 10px 0;
+    }
+    h1,
+    strong {
+      color: #fff;
     }
   }
 
