@@ -8970,3 +8970,8 @@ yargs@^7.0.0:
     which-module "^1.0.0"
     y18n "^3.2.1"
     yargs-parser "^5.0.0"
+
+yue.css@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/yue.css/-/yue.css-0.4.0.tgz#b0731b1ceb2b0113d58b6c41e624e5b86e66459e"
+  integrity sha1-sHMbHOsrARPVi2xB5iTluG5mRZ4=

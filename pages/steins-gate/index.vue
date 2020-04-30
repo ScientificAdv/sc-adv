@@ -10,7 +10,7 @@
         </h2>
         <div class="row">
           <div class="intro-item-block col-lg-6 col-12">
-            <div class="intro-content">
+            <div class="intro-content yue">
               <p
                 class="drop-cap"
               >命运石之门（Steins;Gate）的Steins德语的意思是石头，音译：斯坦因）。强调：在故事中，名词创造者本人——冈部伦太郎/凤凰院凶真明确地指出：这个名词是没有任何含义的，与任何人和事件亦或者物件无关，而没有含义才导致了它却是本作最终的关键词。</p>

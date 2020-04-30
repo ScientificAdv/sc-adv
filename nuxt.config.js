@@ -22,7 +22,9 @@ export default {
     /*
      ** Global CSS
      */
-    css: [],
+    css: [
+        { src: 'yue.css/yue.css', lang: 'css' }
+    ],
     router: {
         middleware: ['meta'],
         base: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/sc-adv/' : '/'

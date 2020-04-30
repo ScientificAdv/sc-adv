@@ -7,6 +7,7 @@
 
 <script>
   export default {
+    scrollToTop: true,
     transition: {
       mode: 'out-in'
     },
