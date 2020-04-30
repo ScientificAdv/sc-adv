@@ -184,7 +184,7 @@
   };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .top-nav {
     display: flex;
     align-items: center;
