@@ -207,7 +207,6 @@
       flex-wrap: wrap;
       flex-shrink: 0;
       background-color: #fff;
-      // overflow: auto; // 调试用
 
       & > li.nav-list-item {
         display: inline-block;
@@ -216,22 +215,23 @@
         margin: 0;
         font-size: 14px;
         color: #303133;
-        padding: 0 5px;
+        padding: 2px 7px;
         cursor: pointer;
         transition: all 0.15s;
         box-sizing: border-box;
-        margin-right: 30px;
+        margin-right: 7px;
 
         & > a {
-          border: transparent solid 3px;
+          border: #eee solid 2px;
+          padding: 2px 7px;
         }
 
         & > a.nuxt-link-exact-active,
         & > a.nuxt-link-active {
           & > span {
             font-weight: 800;
-            border-bottom: #303133 solid 2px;
           }
+          border-color: #222;
         }
       }
     }
@@ -241,7 +241,8 @@
       & > button.dropdown-toggle {
         border: none;
         cursor: pointer;
-        border: transparent solid 3px;
+        border: #eee solid 2px;
+        padding: 2px 7px;
         &.is-expand {
           border-color: #222;
         }
@@ -252,7 +253,7 @@
         top: 45px;
         background-color: #fff;
         min-width: 15em;
-        border: #222 solid 3px;
+        border: #222 solid 2px;
       }
 
       .dropdown-list {
@@ -260,7 +261,7 @@
       }
       .dropdown-list-item {
         padding: 5px 6px;
-        margin: 3px;
+        margin: 5px 3px;
         line-height: initial;
         &:hover {
           background-color: #efefef;
