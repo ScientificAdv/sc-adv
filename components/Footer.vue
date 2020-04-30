@@ -1,9 +1,10 @@
 <template>
   <div class="footer">
     <div class="left-block">
-      <p>本页面最后编辑于2019-10-1</p>
+      <p>本页面最后编辑于2020-05-01</p>
       <p>除非另有声明，否则以非盈利的模式共享授权</p>
       <div class="d-flex">
+        <a class="footer-nav-item" href="https://github.com/ScientificAdv/sc-adv" target="_blank">GitHub仓库</a>
         <nuxt-link class="footer-nav-item" to="/">隐私政策</nuxt-link>
         <nuxt-link class="footer-nav-item" to="/">科学ADV</nuxt-link>
         <nuxt-link class="footer-nav-item" to="/">中文wiki免责声明</nuxt-link>
