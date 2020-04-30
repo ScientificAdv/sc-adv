@@ -1,11 +1,29 @@
 <template>
   <nav id="topNav" class="top-nav" :class="{'no-nav': isNavHiden}">
     <ul class="nav-list">
-      <li v-for="item in navItems" :key="item.text">
-        <nuxt-link :to="item.to" :exact="item.is_exact">
+      <li class="nav-list-item" v-for="item in navItems" :key="item.text">
+        <nuxt-link
+          :to="item.to"
+          :exact="item.is_exact"
+          v-if="!item.dropdowns || item.dropdowns.length===0"
+        >
           <span>{{ item.text }}</span>
-          <i class="iconfont icondown" v-if="item.is_dropdown"></i>
         </nuxt-link>
+        <dropdown-menu v-model="item.is_expand" transition="translate-fade-down" v-else>
+          <button class="dropdown-toggle" :class="{'is-expand': item.is_expand }">
+            <span>{{ item.text }}</span>
+            <i class="iconfont icondown"></i>
+          </button>
+          <ul slot="dropdown" class="dropdown-list">
+            <li class="dropdown-list-item" v-for="dropdown in item.dropdowns" :key="dropdown.title">
+              <nuxt-link
+                class="dropdown-item"
+                :to="dropdown.to"
+                :exact="dropdown.is_exact"
+              >{{ dropdown.title }}</nuxt-link>
+            </li>
+          </ul>
+        </dropdown-menu>
       </li>
     </ul>
     <div class="search-box" :class="{'focus': isSearchFocus}">
@@ -22,8 +40,10 @@
 </template>
 
 <script>
+  import DropdownMenu from '@innologica/vue-dropdown-menu'
   export default {
     components: {
+      DropdownMenu
     },
     data() {
       return {
@@ -33,50 +53,111 @@
           {
             text: '作品中心',
             to: '/steins-gate',
-            is_dropdown: false,
             is_exact: true
           },
           {
             text: '角色汇总',
             to: '/steins-gate/character',
-            is_dropdown: false,
-            is_exact: false
           },
           {
             text: '游戏',
             to: '/steins-gate/game',
-            is_dropdown: true,
-            is_exact: false
+            dropdowns: [
+              {
+                title: '命运石之门（游戏）',
+                to: ''
+              },
+              {
+                title: '命运石之门 比翼恋理的爱人',
+                to: ''
+              },
+              {
+                title: '命运石之门 线性拘束的树状图',
+                to: ''
+              },
+              {
+                title: '命运石之门0‎‎‎‎ （游戏）',
+                to: ''
+              },
+            ]
           },
           {
             text: '动画',
             to: '/steins-gate/anime',
-            is_dropdown: true,
-            is_exact: false
+            dropdowns: [
+              {
+                title: '命运石之门（动画）',
+                to: ''
+              },
+              {
+                title: '命运石之门 负荷领域的既视感',
+                to: ''
+              },
+              {
+                title: '命运石之门 聪明睿智的感知运算',
+                to: ''
+              },
+              {
+                title: '命运石之门0（动画）',
+                to: ''
+              },
+            ]
           },
           {
             text: '漫画',
             to: '/steins-gate/comic',
-            is_dropdown: true,
-            is_exact: false
           },
           {
             text: '广播剧',
             to: '/steins-gate/drama',
-            is_dropdown: true,
-            is_exact: false
+            dropdowns: [
+              {
+                title: '时限轮转的琶音',
+                to: ''
+              },
+            ]
           },
           {
             text: '官方小说',
             to: '/steins-gate/novel',
-            is_dropdown: true,
-            is_exact: false
+            dropdowns: [
+              {
+                title: '圆环连锁のウロボロス',
+                to: ''
+              },
+              {
+                title: 'STEINS;GATE 蝶翼のダイバージェンス',
+                to: ''
+              },
+              {
+                title: 'STEINS;GATE2 形而上のネクローシス',
+                to: ''
+              },
+              {
+                title: '命运石之门：闭时曲线的碑铭',
+                to: ''
+              },
+              {
+                title: '命运石之门：永劫回归的潘朵拉',
+                to: ''
+              },
+              {
+                title: '命运石之门：无限远点的天鹰座α',
+                to: ''
+              },
+              {
+                title: '命运石之门 承认共鸣的容赦',
+                to: ''
+              },
+              {
+                title: '命运石之门 承认共鸣的赠呈',
+                to: ''
+              }
+            ]
           },
           {
             text: '音乐',
             to: '/steins-gate/ablum',
-            is_dropdown: true,
-            is_exact: false
           },
         ]
       };
@@ -91,6 +172,14 @@
         }
         return state;
       }
+    },
+    created() {
+      const vm = this;
+      this.navItems.forEach(el => {
+        if (el.dropdowns && el.dropdowns.length > 0) {
+          vm.$set(el, 'is_expand', false);
+        }
+      });
     }
   };
 </script>
@@ -118,27 +207,63 @@
       flex-wrap: wrap;
       flex-shrink: 0;
       background-color: #fff;
-      overflow: auto; // 调试用
+      // overflow: auto; // 调试用
 
-      li {
+      & > li.nav-list-item {
         display: inline-block;
         height: 60px;
         line-height: 60px;
         margin: 0;
         font-size: 14px;
         color: #303133;
-        padding: 0 10px;
+        padding: 0 5px;
         cursor: pointer;
         transition: all 0.15s;
         box-sizing: border-box;
         margin-right: 30px;
 
-        a.nuxt-link-exact-active,
-        a.nuxt-link-active {
+        & > a {
+          border: transparent solid 3px;
+        }
+
+        & > a.nuxt-link-exact-active,
+        & > a.nuxt-link-active {
           & > span {
             font-weight: 800;
             border-bottom: #303133 solid 2px;
           }
+        }
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      & > button.dropdown-toggle {
+        border: none;
+        cursor: pointer;
+        border: transparent solid 3px;
+        &.is-expand {
+          border-color: #222;
+        }
+      }
+      & > .dropdown-menu {
+        float: right;
+        position: absolute;
+        top: 45px;
+        background-color: #fff;
+        min-width: 15em;
+        border: #222 solid 3px;
+      }
+
+      .dropdown-list {
+        padding: 8px 5px;
+      }
+      .dropdown-list-item {
+        padding: 5px 6px;
+        margin: 3px;
+        line-height: initial;
+        &:hover {
+          background-color: #efefef;
         }
       }
     }

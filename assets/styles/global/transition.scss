@@ -11,3 +11,29 @@
 .page-leave-active {
     transition: all 0s;
 }
+
+
+/*translate fade (top to down)*/
+.translate-fade-down-enter-active,
+.translate-fade-down-leave-active {
+    transition: all 250ms;
+    transition-timing-function: cubic-bezier(.53, 2, .36, .85);
+}
+
+.translate-fade-down-enter,
+.translate-fade-down-leave-active {
+    opacity: 0;
+}
+
+.translate-fade-down-enter,
+.translate-fade-down-leave-to {
+    position: absolute;
+}
+
+.translate-fade-down-enter {
+    transform: translateY(-10px);
+}
+
+.translate-fade-down-leave-active {
+    transform: translateY(10px);
+}
