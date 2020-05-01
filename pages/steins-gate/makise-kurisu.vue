@@ -107,15 +107,15 @@
           <table>
             <tbody>
               <tr>
-                <td>日文</td>
+                <td class="font-weight-bold">日文</td>
                 <td>牧瀬 紅莉栖</td>
               </tr>
               <tr>
-                <td>假名</td>
+                <td class="font-weight-bold">假名</td>
                 <td>まきせ くりす</td>
               </tr>
               <tr>
-                <td>罗马音</td>
+                <td class="font-weight-bold">罗马音</td>
                 <td>Makise Kurisu</td>
               </tr>
             </tbody>
@@ -123,27 +123,27 @@
           <table>
             <tbody>
               <tr>
-                <td>出生年份</td>
+                <td class="font-weight-bold">出生年份</td>
                 <td>1992年</td>
               </tr>
               <tr>
-                <td>生日</td>
+                <td class="font-weight-bold">生日</td>
                 <td>7月25日</td>
               </tr>
               <tr>
-                <td>星座</td>
+                <td class="font-weight-bold">星座</td>
                 <td>狮子座</td>
               </tr>
               <tr>
-                <td>年龄</td>
+                <td class="font-weight-bold">年龄</td>
                 <td>18岁（2010年）</td>
               </tr>
               <tr>
-                <td>身高</td>
+                <td class="font-weight-bold">身高</td>
                 <td>160cm</td>
               </tr>
               <tr>
-                <td>体重</td>
+                <td class="font-weight-bold">体重</td>
                 <td>45kg</td>
               </tr>
             </tbody>
@@ -168,6 +168,7 @@
 
 <style lang="scss" scoped>
   .main-section-content {
+    padding-top: 1.25em;
     margin-bottom: 10em;
     h2 {
       min-width: 80%;
@@ -233,7 +234,7 @@
     .img-cover {
       position: relative;
       right: 15px;
-      top: 15px;
+      top: 2.5em;
       width: 100%;
       margin: auto;
       & > img {
@@ -244,7 +245,7 @@
 
     .sub-section-content {
       position: relative;
-      padding: 20px 10px;
+      padding: 2.75em 10px 10px;
       * {
         color: #fff;
       }
