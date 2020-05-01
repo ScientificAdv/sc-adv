@@ -11,7 +11,7 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.0/normalize.min.css,npm/bootstrap-css-only@4.1.3/css/bootstrap-grid.min.css' },
+            // { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/combine/npm/normalize.css@8.0.1/normalize.min.css,npm/bootstrap-css-only@4.1.3/css/bootstrap-grid.min.css' },
             { rel: 'stylesheet', href: '//at.alicdn.com/t/font_1478452_c6l3dd64sfi.css' }
         ]
     },
@@ -23,6 +23,8 @@ export default {
      ** Global CSS
      */
     css: [
+        { src: 'normalize.css/normalize.css', lang: 'css' },
+        { src: 'bootstrap-css-only/css/bootstrap-grid.min.css', lang: 'css' },
         { src: 'yue.css/yue.css', lang: 'css' },
         { src: '~/assets/styles/global/global.scss', lang: 'scss' }
     ],
