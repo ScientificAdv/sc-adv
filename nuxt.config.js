@@ -42,6 +42,7 @@ export default {
      ** Build configuration
      */
     build: {
+        publicPath: 'https://cdn.jsdelivr.net/gh/ScientificAdv/sc-adv',
         extend(config, ctx) {
             if (ctx.isDev && ctx.client) {
                 config.module.rules.push({
