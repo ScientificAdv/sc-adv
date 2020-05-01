@@ -205,7 +205,7 @@
           },
           {
             title: '牧濑红莉栖',
-            to: '/'
+            to: '/steins-gate/makise-kurisu'
           },
           {
             title: '椎名真由理',

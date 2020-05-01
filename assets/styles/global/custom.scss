@@ -10,6 +10,18 @@
     width: 1px;
 }
 
+.heimu {
+    background-color: #252525;
+    color: #252525;
+    text-shadow: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        transition: color .15s linear;
+        color: #fff;
+    }
+}
 
 .drop-cap::first-letter {
     font-size: 200%;
