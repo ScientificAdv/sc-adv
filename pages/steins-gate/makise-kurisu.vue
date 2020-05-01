@@ -5,10 +5,12 @@
         <article class="main-section-content yue">
           <section class="title">
             <div class="container">
-              <h1>牧濑红莉栖</h1>
-              <blockquote>
-                <p>開頭して海馬に電極ぶっ刺してやりたい!</p>
-              </blockquote>
+              <div class="row">
+                <h1 class="col-md-6">牧濑红莉栖</h1>
+                <blockquote class="col-md-5 offset-md-1 character-quote align-self-end">
+                  <p>開頭して海馬に電極ぶっ刺してやりたい!</p>
+                </blockquote>
+              </div>
             </div>
           </section>
           <section class>
@@ -166,6 +168,7 @@
 
 <style lang="scss" scoped>
   .main-section-content {
+    margin-bottom: 10em;
     h2 {
       min-width: 80%;
       padding-bottom: 0.2em;
@@ -178,7 +181,39 @@
 
     .title h1 {
       font-size: 2.5em;
+      margin-bottom: 0.25em;
     }
+
+    blockquote.character-quote {
+      position: relative;
+      border-left: none;
+      margin-bottom: 0;
+      padding: 20px 35px;
+      color: #222;
+      font-size: 1.25em;
+      font-weight: 700;
+      &::before,
+      &::after {
+        position: absolute;
+        background-size: cover;
+        content: "";
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-image: url("~assets/img/ui/format-quote.svg");
+        opacity: 0.5;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        transform: rotate(180deg);
+      }
+      &::after {
+        bottom: 0;
+        right: 0;
+      }
+    }
+
     section:not(.title) {
       padding: 10px 0 20px;
     }
@@ -195,14 +230,12 @@
     height: 100%;
     background-color: rgba(175, 96, 73, 0.75);
     color: #fff;
-    // box-shadow: inset -7px 0px 0px 0px #1d1d1d6b;
     .img-cover {
       position: relative;
       right: 15px;
       top: 15px;
       width: 100%;
       margin: auto;
-      // max-width: 100%;
       & > img {
         box-shadow: #444 -7px 7px 0px;
         max-height: 400px;
