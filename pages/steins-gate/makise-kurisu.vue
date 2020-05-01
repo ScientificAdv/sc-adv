@@ -180,8 +180,8 @@
     }
 
     .title h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.25em;
+      font-size: 2.25em;
+      margin-bottom: 0.2em;
     }
 
     blockquote.character-quote {
@@ -215,7 +215,7 @@
     }
 
     section:not(.title) {
-      padding: 10px 0 20px;
+      padding: 5px 0 15px;
     }
 
     section:not(.title):nth-of-type(odd) {
