@@ -6,7 +6,7 @@ export default {
         titleTemplate: '%s | 科学ADV中文Wiki',
         meta: [
             { charset: 'utf-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            // { name: 'viewport', content: 'width=device-width, initial-scale=1' }, // 在手机自适应完成前先去除
             { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
         ],
         link: [

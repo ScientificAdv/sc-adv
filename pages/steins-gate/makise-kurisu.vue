@@ -78,15 +78,12 @@
               <p></p>
             </div>
           </section>
-          <!-- <section class>
-            <div class="container">
-              <h2>名台词</h2>
-              <p></p>
-            </div>
-          </section>-->
           <section class>
             <div class="container">
-              <h2>萌点</h2>
+              <h2>
+                <del>个性特点</del>
+                萌点
+              </h2>
               <p></p>
             </div>
           </section>
